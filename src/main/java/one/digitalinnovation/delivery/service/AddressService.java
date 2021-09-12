@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import one.digitalinnovation.delivery.entity.Address;
-import one.digitalinnovation.delivery.entity.Person;
 import one.digitalinnovation.delivery.exception.AddressNotFoundException;
-import one.digitalinnovation.delivery.exception.PersonNotFoundException;
 import one.digitalinnovation.delivery.repository.AddressRepository;
 
 @Service

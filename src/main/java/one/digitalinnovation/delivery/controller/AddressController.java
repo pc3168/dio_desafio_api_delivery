@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import one.digitalinnovation.delivery.entity.Address;
-import one.digitalinnovation.delivery.entity.Person;
 import one.digitalinnovation.delivery.exception.AddressNotFoundException;
-import one.digitalinnovation.delivery.exception.PersonNotFoundException;
 import one.digitalinnovation.delivery.service.AddressService;
 
 @RestController
@@ -33,7 +31,7 @@ public class AddressController {
 	
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public String createPerson(@RequestBody Address address) {
+	public String createAddress(@RequestBody Address address) {
 		return addressService.createAddress(address);
 	}
 	

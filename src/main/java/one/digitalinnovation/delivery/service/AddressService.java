@@ -27,8 +27,8 @@ public class AddressService {
 	}
 
 	public List<Address> listAll() {
-		List<Address> allPeople = addressRepository.findAll();
-		return allPeople;
+		List<Address> allAddress = addressRepository.findAll();
+		return allAddress;
 	}
 
 	public Address findById(Integer id) throws AddressNotFoundException {
@@ -53,7 +53,7 @@ public class AddressService {
 	
 	private Address verifyIfExists(Integer id) throws AddressNotFoundException {
 		Optional<Address> optional = addressRepository.findById(id);
-		if(optional.isEmpty()) {
+		if(optional.isPresent()) {
 			throw new AddressNotFoundException(id);
 		}
 		return optional.get();

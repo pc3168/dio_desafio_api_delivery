@@ -53,7 +53,7 @@ public class PersonService {
 	
 	private Person verifyIfExists(Integer id) throws PersonNotFoundException {
 		Optional<Person> optionalPerson = personRepository.findById(id);
-		if(optionalPerson.isPresent()) {
+		if(!optionalPerson.isPresent()) {
 			throw new PersonNotFoundException(id);
 		}
 		return optionalPerson.get();

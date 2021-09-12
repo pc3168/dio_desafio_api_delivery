@@ -53,7 +53,7 @@ public class AddressService {
 	
 	private Address verifyIfExists(Integer id) throws AddressNotFoundException {
 		Optional<Address> optional = addressRepository.findById(id);
-		if(optional.isPresent()) {
+		if(!optional.isPresent()) {
 			throw new AddressNotFoundException(id);
 		}
 		return optional.get();

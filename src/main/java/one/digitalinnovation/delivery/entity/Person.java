@@ -2,6 +2,7 @@ package one.digitalinnovation.delivery.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +24,8 @@ public class Person {
 	@Column(nullable = false, unique = true)
 	private String personCpf;
 	
-	@OneToMany
-	@JoinColumn(name = "person_id")
+	@OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+	@JoinColumn(name = "person_id" )
 	private List<Address> addresses;
 
 	public Person() {

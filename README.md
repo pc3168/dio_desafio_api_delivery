@@ -9,6 +9,29 @@
 http://localhost:8080/api/v1/people
 ```
 
+Criando um usuário com JSON
+```
+{
+    "personName": "PAULO CESAR",
+    "personCpf": "11111111111",
+    "addresses": [
+            {
+                "addressName": "Manuel Alvarenga",
+                "addressNumber": 100,
+                "addressComplement": "CASA",
+                "addressType": "HOME",
+                "district": {
+                    "districtName": "Colina"
+                },
+                "city": {
+                    "cityName": "Alfenas"
+                }
+            }
+        ]
+}
+```
+
+ * segue o link do Heroku [Projeto] (https://create-crud-people.herokuapp.com/api/v1/people/)
 
 São necessários os seguintes pré-requisitos para a execução do projeto desenvolvido:
 
